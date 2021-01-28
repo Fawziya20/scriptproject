@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>AREA OF TRIANGLE</title>
+    <link rel="stylesheet" href="{% static 'css/calculation.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="formview">
+            <div class="banner">
+                AREA OF TRIANGLE
+            </div>
+            <div class="content">
+                <form action="" method="GET">
+                    {% csrf_token %}
+                    <div class="forminput">
+                        <label for="value_d">BASE=</label>
+                        <input type="text" name="value_d" id="value_d">
+                    </div>
+                    <div  class="forminput">
+                        <label for="value_e">HEIGHT=</label>
+                        <input type="text" name="value_e" id="value_e">
+                    </div>                    
+                    <div class="forminput">
+                        <button type="button" name="button_area" id="button_area">CALCULATE</button>
+                    </div>
+                    <div  class="forminput">
+                        <label for="value_f">AREA=</label>
+                        <input type="text" name="value_f" id="value_f" readonly>
+                    </div>                   
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/2.js"></script>
+</body>
+
+</html>
